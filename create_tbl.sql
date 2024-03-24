@@ -1,0 +1,2 @@
+CREATE TABLE `reactlognregister`.`user_detail` ( `userid` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(20) NOT NULL , `emailID` VARCHAR(120) 
+INSERT INTO `user_detail` (`userid`, `username`, `emailID`, `password`, `add_date`) VALUES (NULL, 'omshivaya', 'omshivaya@gmail.com', 'Easof@12345', current_timestamp());
