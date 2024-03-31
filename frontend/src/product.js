@@ -20,9 +20,9 @@ function Products({id, title, image, rating, price}) {
             <h4>{title}</h4>
             <strong>{price}</strong>
             <p>
-            {Array(rating).fill().map((_, i) => (
-                <span>*</span>
-            ))}
+                {Array(rating).fill().map((_, i) => (
+                    <span key={i}>*</span>
+                ))}
             </p>
             <div className='d-flex flex-column align-items-center'>
                 <img src={`/img/${image}`} className='w-50 mt-1' alt="PC" style={{height :"250px"}}/>
