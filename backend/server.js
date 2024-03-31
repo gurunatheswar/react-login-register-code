@@ -38,7 +38,7 @@ const db = mysql.createConnection({
 console.log(db);
 app.post('/signup', (req, res) => {
     console.log("res",res)
-    const sql = "INSERT INTO user_detail (`username`, `emailID`, `password`) VALUES (?)";
+    const sql = "INSERT INTO ps_customer (`username`, `emailID`, `password`) VALUES (?)";
     const values = [
         req.body.username,
         req.body.email,
@@ -61,7 +61,7 @@ app.post('/signup', (req, res) => {
 
 app.post('/signin', (req, res) => {
     console.log("res",res)
-    const sql = "SELECT *  FROM `user_detail` WHERE `emailID` LIKE ? and password =?";
+    const sql = "SELECT *  FROM `ps_customer` WHERE `emailID` LIKE ? and password =?";
     const values = [        
         req.body.email,
         req.body.password
